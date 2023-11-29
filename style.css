@@ -9,16 +9,25 @@ body {
     margin: 0;
     background-color: #f8f9fa;
     font-family: 'Roboto Mono', monospace;
-    }
-    
+    color: gray;
+    transition: background-color 0.3s, color 0.3s;
 
+}
+
+body.dark-mode {
+    background-color: rgb(20 28 47);
+}
 
 .card-container {
     width: 700px;
-    height: 400px;
+    height: 450px;
     border: 1px solid black;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .card-container {
+    background-color: rgb(31 42 72);
 }
 
 .card-img-top {
@@ -36,14 +45,25 @@ body {
     margin-right: auto;
     background-color: #f8f9fa;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+.card-bar.dark-mode {
+    background-color: rgb(31 42 72);
 }
 
 .card-bar p {
     margin: 0;
 }
 
+body.dark-mode .card-bar {
+    background-color: rgb(20 28 47);
+    color: white;
+    font-size: 18px;
+}
+
 .card-text-date {
-    margin-top: -104px;
+    margin-top: -53px;
     margin-left: 344px;
 }
 
@@ -73,6 +93,7 @@ body {
 
 .card-text {
     margin-top: -2px;
+    margin-bottom: 23px;
 }
 
 img {
@@ -97,15 +118,18 @@ img {
     background-color: white;
 }
 
+body.dark-mode #githubForm {
+    background-color: rgb(31 42 72);
+}
+
 .custom-btn {
     background-color: #007bff;
     color: #fff;
     border-color: #007bff;
-     
 }
 
 .custom-btn:hover {
-    background-color: #5fabff;  
+    background-color: #5fabff;
 }
 
 .container.card-bar {
@@ -124,3 +148,124 @@ img {
 .lupa {
     margin-left: 25px;
 }
+
+.night-mode {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -9px;
+    color: black;
+    font-size: 20px;
+}
+
+body.dark-mode #searchBar {
+    background-color: rgb(31 42 72);
+    border: 1px solid transparent;
+}
+
+body.dark-mode #githubForm #searchBar {
+    border: 1px solid transparent;
+}
+
+#repos,
+#followers,
+#following {
+    font-weight: bolder;
+    font-size: 23px;
+}
+
+.general-container,
+.form-container,
+.card-container,
+.card-bar,
+.card-img-top {
+    border-radius: 15px;
+}
+
+#searchBar {
+    border-radius: 10px;
+}
+
+#githubForm {
+    border-radius: 15px;
+    padding: 12px 12px;
+}
+
+#dark-mode-toggle {
+    border-radius: 10px;
+}
+
+body.dark-mode #dark-mode-toggle path,
+body.dark-mode .card-container path,
+body.dark-mode .lower-container path {
+    fill: white;
+}
+
+.lupa path {
+    fill: #007bff;
+}
+
+.dark-text {
+    font-size: 17px;
+    margin-right: -478px;
+}
+
+body.dark-mode .night-mode p {
+    color: white;
+}
+
+body.dark-mode .dark-text {
+    color: white;
+}
+
+#dark-mode-toggle {
+    border: none !important;
+    height: 20px;
+    border: 0;
+    outline: none;
+}
+
+#dark-mode-toggle:hover,
+#dark-mode-toggle:focus {
+    border: none;
+}
+
+#dark-mode-toggle:hover path {
+    fill: grey;
+}
+
+/* Moon and Sun Icons */
+.moon-icon,
+.sun-icon {
+    width: 20px;
+    height: 20px;
+    fill: #007bff;
+    transition: fill 0.3s;
+}
+
+.sun-icon {
+    display: none;
+}
+
+body.dark-mode .moon-icon {
+    display: none;
+}
+
+body.dark-mode .sun-icon {
+    display: inline-block;
+    fill: white;
+}
+
+#name {
+  margin-top: -127px;
+  color: black;
+}
+
+
+#account {
+    color: rgb(1 118 248);
+    margin-top: -11px;
+    margin-left: -13px;
+  }
+  
+
+
